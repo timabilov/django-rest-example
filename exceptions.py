@@ -4,7 +4,7 @@ from rest_framework.response import Response
 
 
 def custom_drf_exception_handler(exc, context):
-    print (exc, context)
+    print(exc, context)
     response = exception_handler(exc, context)
     if response:
         return response
