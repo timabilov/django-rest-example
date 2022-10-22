@@ -3,13 +3,15 @@ from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 from rest_framework import views
 from rest_framework.response import Response
+# from rest_framework.mixins import CreateModelMixin, RetrieveModelMixin
+# from rest_framework.viewsets import GenericViewSet
 
 from bloodtests.models import Test
 from bloodtests.serializers import TestSerializer
 
 
-# we can have the same logic here. difference will on our customized create-or-update behaviour
-# class TestDetails(ModelViewSet):
+# we can have the same logic here. difference will be on our customized create-or-update behaviour and urls.py
+# class TestDetails(GenericViewSet, CreateModelMixin, RetrieveModelMixin):
 
 #     queryset = Test
 #     serializer_class = TestSerializer
