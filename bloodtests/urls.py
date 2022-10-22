@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import TestDetails
+from .views import TestDetailsAPIView
 
 
 urlpatterns = (
-    path('test/<str:code>', TestDetails.as_view()),
+    path('test/<str:code>', TestDetailsAPIView.as_view()),
 )
