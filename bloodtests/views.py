@@ -36,7 +36,10 @@ class TestDetailsAPIView(views.APIView):
         }
         existing = Test.objects.filter(code=code).first()
 
-        # Current policy is update existing one. But this will work too.
+        # Current policy is update existing one.
+        # If we want get-or-create policy:
+        # if existing:
+        #   return JsonResponse(TestSerializer(instance=existing).data, status=200)
 
         serializer = TestSerializer(data=data, instance=existing)
 
